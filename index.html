@@ -1,76 +1,801 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <title>Calculator</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-   
-    <div id="calculator">
-        <h1>Calculator</h1>
-        <div id="display-container">
-            <p id="display"> </p>
-        </div>
-        <div id="buttons-container">
-            <div class="button" id="button-clear" data-value="ac">
-                <span>AC</span>
-            </div>
-            <div class="button" id="button-sign" data-value="sign">
-                <span>+/-</span>
-            </div>
-            <div class="button" id="button-percent" data-value="%">
-                <span> % </span>
-            </div>
-            <div class="button red" data-value="/" id="button-divide">
-                <span> / </span>
-            </div>
-            <div class="button" id="button-seven" data-value="7">
-                <span>7</span>
-            </div>
-            <div class="button" id="button-eight" data-value="8">
-                <span>8</span>
-            </div>
-            <div class="button" id="button-nine" data-value="9">
-                <span>9</span>
-            </div>
-            <div class="button red" id="button-multiply" data-value="*">
-                <span>*</span>
-            </div>
-            <div class="button" id="button-four" data-value="4">
-                <span>4</span>
-            </div>
-            <div class="button" id="button-five" data-value="5">
-                <span>5</span>
-            </div>
-            <div class="button" id="button-six" data-value="6">
-                <span>6</span>
-            </div>
-            <div class="button red" id="button-minus" data-value="-">
-                <span>-</span>
-            </div>
-            <div class="button" id="button-one" data-value="1">
-                <span> 1 </span>
-            </div>
-            <div class="button" id="button-two" data-value="2">
-                <span> 2 </span>
-            </div>
-            <div class="button" id="button-three" data-value="3">
-                <span> 3 </span>
-            </div>
-            <div class="button red" id="button-plus" data-value="+">
-                <span> + </span>
-            </div>
-            <div class="button" id="button-zero" data-value="0">
-                <span> 0 </span>
-            </div>
-            <div class="button" id="button-decimal" data-value=".">
-                <span> . </span>
-            </div>
-            <div class="button red" id="button-equals" data-value="=">
-                <span> = </span>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Saurav Kumar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170291156-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-170291156-1');
+	</script>
+
+	</head>
+	<body>
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
+				<h1 id="colorlib-logo"><a href="index.html">Saurav Kumar</a></h1>
+				<span class="position"><a href="#">Software Engineer</a></span>
+			</div>
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="about">About</a></li>
+						<li><a href="#" data-nav-section="services">Interests</a></li>
+						<li><a href="#" data-nav-section="skills">Skills</a></li>
+						<li><a href="#" data-nav-section="education">Education</a></li>
+						<li><a href="#" data-nav-section="experience">Experience</a></li>
+						<li><a href="#" data-nav-section="certifications">Certifications</a></li>
+						<li><a href="#" data-nav-section="work">Projects</a></li>
+						<li><a href="#" data-nav-section="achievements">Achievements</a></li>
+						<li><a href="#" data-nav-section="blog">Blog</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="colorlib-footer">
+				<ul>
+					<li><a href="https://github.com/sauravabc16" target="_blank"><i class="icon-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/sauravabc16/" target="_blank"><i class="icon-linkedin2"></i></a></li>
+					<!-- <li><a href="https://www.behance.net/amulyaboyapati" target="_blank"><i class="icon-behance"></i></a></li> -->
+					<li><a href="https://halfbakedsoup.wordpress.com" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></i></a></li>
+					<li><a href="https://www.instagram.com/sauravabc16/" target="_blank"><i class="icon-instagram"></i></a></li>
+
+					
+				</ul>
+				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> </small></p>
+
+			</div>
+
+		</aside>
+
+		<div id="colorlib-main">
+
+			<section id="colorlib-hero" class="js-fullheight" data-section="home" >
+				<a href="#welcome">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+				   	<li style="background-image: url(images/img_bg_1.png);">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner js-fullheight">
+					   					<div class="desc">
+					   						<br>
+					   						<br>
+					   						<br><br><br><br><br><br>
+
+						   					<h1>Hi! <br>I'm Saurav </h1>
+						   					<h3>I'm <span class="typed-words"></span></h3>
+						   					
+												<p><a href="Resume-Saurav-Kumar.pdf" target="_blank" download class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
+
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   		
+
+				   	</li>
+				   
+				  	</ul>
+				  				  	</div><hr style="width:90%;text-align:center; height: 0.5px;background-color:black;margin-left:10;padding: 0" ></a>
+			</section>
+
+			<section class="colorlib-about" data-section="about" id="welcome">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta">Who Am I?</span>
+										<!-- <h2 class="colorlib-heading">Who Am I?</h2> -->
+										<p><strong>Hello, my name is Saurav Kumar.</strong> I’m passionate person who loves to learn new things. I like Data Science, Web Development & Java Development.
+											I am a highly adaptive and flexible individual actively looking for an opportunity in Software Development where I can leverage my experience, 
+											technical expertise, and problem- solving skills and build applications specific to the business needs of the company 
+											and help improve the lives of those around me.</p>
+
+										<p>I'm a creative, artistic and ambitious with a talent for thinking outside the box. 
+											I bring innovative ideas to the table which can be useful in every part of life. I love to solve problems and I enjoy overcoming challenges. 
+											I have excellent team spirit and communication skills which enable me to effectively communicate with a wide range of people.</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-services" data-section="services">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Interests</span>
+							<!-- <h2 class="colorlib-heading">Interests</h2> -->
+						</div>
+					</div>
+					<div class="row row-pt-md">
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-1">
+								<span class="icon">
+									<i class="icon-bulb"></i>
+								</span>
+								<div class="desc">
+									<h3>Problem Solving</h3>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-2">
+								<span class="icon">
+									<i class="icon-layers2"></i>
+								</span>
+								<div class="desc">
+									<h3>Web Development</h3>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-3">
+								<span class="icon">
+									<i class="fa fa-newspaper-o" aria-hidden="true"></i>
+								</span>
+								<div class="desc">
+									<h3>Java Programming</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-4">
+								<span class="icon">
+									<i class="icon-layers2"></i>
+								</span>
+								<div class="desc">
+									<h3>Research</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-5">
+								<span class="icon">
+									<i class="fa fa-paint-brush" aria-hidden="true"></i>
+								</span>
+								<div class="desc">
+									<h3>Data Science</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<div class="services color-6">
+								<span class="icon">
+									<i class="fa fa-tree" aria-hidden="true"></i>
+								</span>
+								<div class="desc">
+									<h3>Gardening</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="colorlib-narrow-content">
+					<div class="row">
+					</div>
+					<div class="row">
+						<div class="col-md-4 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="10" data-speed="2500" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Projects</span>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="2" data-speed="2500" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Internships</span>
+						</div>
+						<div class="col-md-4 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="5" data-speed="2500" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Organizations</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<section class="colorlib-skills" data-section="skills">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft"><!-- 
+							 --><span class="heading-meta">Skills</span> 
+							<!-- <h2 class="colorlib-heading animate-box">Skills</h2> -->
+						</div>
+					</div>
+					<div class="row">
+						
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="row">
+							<button class="button button1">Problem Solving</button>&nbsp&nbsp&nbsp
+							<button class="button button1">Data Structures</button>&nbsp&nbsp&nbsp
+							<button class="button button1">Java</button>&nbsp&nbsp&nbsp
+							<button class="button button1">Web Development</button>&nbsp&nbsp&nbsp
+							<button class="button button1">MySQL</button>&nbsp
+							<button class="button button1">HTML</button>&nbsp
+							</div>
+							<br>
+							<div class="row">
+							<button class="button button1">CSS</button>&nbsp&nbsp&nbsp
+							<button class="button button1">nodeJS</button>&nbsp&nbsp&nbsp
+							<button class="button button1">React</button>&nbsp&nbsp&nbsp
+							<button class="button button1">Bootstrap</button>&nbsp&nbsp&nbsp
+							<button class="button button1">Leadership</button>&nbsp&nbsp&nbsp
+							<button class="button button1">Communication</button>
+
+							</div>
+
+							
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-education" data-section="education">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Education</span>
+							<!-- <h2 class="colorlib-heading animate-box">Education</h2> -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor of Technology (IT) <span>- 2020</span>
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+												<p><strong> Bachelor of Technology (B.Tech.), Information Technology<br>Vellore Institute of Technology,Vellore</strong></p>
+												<p>Courses Studied: <br> Data Structures & Algorithms, DBMS, Operating Systems, Data Mining, Big Data Analytics and many more. </p>
+													
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Intermediate in Science (I.Sc) <span> - 2016</span>
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+												<p><strong>Intermediate (Science) <br>BSEB, Patna<br>Scored in top 0.5 percentile of the entire State</strong></p>
+												<p>Subjects Studied: <br> Mathematics, Physics, Chemistry, English, Hindi & NRB </p>
+									        </div>
+									    </div>
+									</div>
+
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFive">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">All India Secondary School Examination(AISSE)
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+									        <div class="panel-body">
+												
+												<p><strong>High School Secondary Education <br>St.Anne's Convent School, Chandigarh</strong></p>	
+												<p>Subjects Studied: <br> Mathematics, Science, Foundation of IT, English, Hindi & Social Science</p>
+									        </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Experience</span>
+							<!-- <h2 class="colorlib-heading animate-box">Work Experience</h2> -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="https://www.linkedin.com/in/sauravabc16/" target="_blank">Data Research Intern at Jio Infotech.</a> <span>May 2018- July 2018</span></h2>
+					                  <p>
+					                  	<ul>
+					                  		<strong>As an intern I : </strong>
+											<li>Created an interface with a stock price data feed.</li>
+											<li>Displayed the data visually for traders.</li>
+											<li>Compiled various structured and non structured data sources and created csv files from data derived of Microsoft Kaizala API.</li>
+											<li>Created data dashboard using pandas, matplotlib, bokeh and other data visualization tools in python.</li>
+											<a href="OYO_Certificate.jpg" target="_blank" download class="btn btn-primary btn-learn">Certificate<i class="icon-download4"></i></a>
+					                  		
+
+					                  	</ul>
+					                  </p>
+					               </div>
+					            </div>
+					         </article>
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="https://www.linkedin.com/in/sauravabc16/" target="_blank">Campus Ambessedor at Oyo</a> <span>March 2018- Sep 2018</span></h2>
+					                  <p>
+					                  	<ul>
+					                  		<li>Involved in creating marketing strategies for involving students of my Collage</li>
+					                  		<li>Execuded CSR project aimed to provide innovative mechanism for local governments, municipalities etc. to improve their decision-making capabilities. </li>
+					                  		<strong>As an intern at Oyo I: </strong>
+					                  		<li>Was responsible for data collection, sales and POC for customers.</li>
+					                  		<li>Gained exposure to Sales, Corporate Communication and Long term planning.</li>
+											<li>Gained knowledge about the hospitality industry, their culture, work environment and the ever growing field of software development.  </li>
+											<a href="OYO_Certificate.jpg" target="_blank" download class="btn btn-primary btn-learn">Certificate<i class="icon-download4"></i></a> 
+					                  	</ul>
+					                  </p>
+					               </div>
+					            </div>
+					         </article>
+					         
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="https://www.linkedin.com/in/sauravabc16/" target="_blank"> Data and Tech Research intern at Govt. of India, New Delhi</a><span>&nbsp May 2017-  Jul 2017</span></h2>
+					                  <p>
+										<ul>
+											<li>Was selected for the internship in National Level completion for policy and technology as part of Mission Antyodhya by central government.</li>
+											<li>Worked on policy under the MoS shree Gagendra Singh Shekhawat on formation for Healthcare policies and use of data for policy framework. </li>
+											<strong>As an intern I: </strong>
+											<li>Proposed a data mining application to curb spread of communicable disease.</li>
+											<li>The system was better utilise the data collacted at hospitals to better allocate funds for different localities</li>
+											<li>Gained knowledge about how techonologies play an important role in government mechanism. </li>
+											<a href="GOI_Certificate.jpg" target="_blank" download class="btn btn-primary btn-learn">Certificate<i class="icon-download4"></i></a>
+											<a href="GOI Internship.pdf" target="_blank" download class="btn btn-primary btn-learn">LOR<i class="icon-download4"></i></a>
+										</ul>
+										
+					                  </p>
+					               </div>
+					            </div>
+					         </article>
+
+					         
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				   </div>
+				</div>
+			</section>
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Responsibility</span>
+							<!-- <h2 class="colorlib-heading animate-box">Positions of responsibility</h2> -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
+
+					               <div class="timeline-label">
+					                  <h2><a href="#">Research Head at Entrepreneurship Cell, VIT</a> <span>Dec 2017-Jan 2020</span></h2>
+					                  <p>
+					                  	<ul>
+					                  		<li>Carried Club's mission and vison forth.</li>
+					                  		<li>Organizer for E-Summit (VIT’s Entrepreneurship fest)</li>
+					                  		<li>Organizer for HackerTech (competitive coding)</li>
+					                  		<li>Organized several Startup Workshops and events including Futurepreneurs help fellow students develop sound financial skills.</li>
+					                  		<li>Mentored several startups in the initial phases</li>
+					                  		<li>Learnt team management through productive brain storming sessions to help identify and solve numerous problem issues. </li>
+					                  		<li>My tenure as Research Head helped me to develop leadership qualities and taught me to be open to ideas and suggestions to encourage active participation. </li>
+
+					                  		
+					                  	</ul></p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Coordinator for Riviera ‘2019</a> <span>Dec 2019-Mar 2019</span></h2>
+					                  <p>
+					                  	<ul>
+					                  		<li>Worked as a member of Guest Care Committee, responsible for managing external participents in Riviera events.</li>
+					                  		<li>Understood the workflow and chain of command.</li>
+					                  		
+					                  	</ul>
+					                  </p>
+					               </div>
+					            </div>
+					         </article>
+					         
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					               	<h2><a href="#">Core-Committee member at Debate Society at VIT</a> <span>Dec 2016-Mar 2018</span></h2>
+					                  <p>
+					                  	<ul>
+					                  		<li>Was a devoted member of the technical team.</li>
+					                  		<li>Debated in various intra as well as inter college debates on varied range of motions which gave me confidance to speak my mind infront of large crowd under pressure</li>
+					                  		<li>Enhanced my efficiency and boosted my profile by contributing to various other departments of the organization such as management and sponsorship.</li>
+					                  		<li>Developed the right approach to communicate with distinct audiences.</li>
+					                  	</ul>
+					                  </p>
+					               </div>
+					            </div>
+					         </article>
+					         
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				   </div>
+				</div>
+			</section>
+			<section class="colorlib-certifications" data-section="certifications">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta"> Global Certifications</span>
+										<!-- <h2 class="colorlib-heading">Certifications</h2> -->
+										<p><ul>
+											<li><a href="https://coursera.org/share/464ab135ec3378f2e2fa5099803af18c" target="_blank">Python for Data Science and AI - by Coursera</a></li>
+											<li><a href="https://www.coursera.org/account/accomplishments/verify/MJ7PLZUJ6MGG" target="_blank">UX design fundamentals - Coursera </a></li>
+											<li><a href="https://coursera.org/share/464ab135ec3378f2e2fa5099803af18c" target="_blank">Mathematics for Machine Learning: Linear Algebra - by Coursera </a></li>
+											<li><a href="https://coursera.org/share/06c63d9283c764ff6878571b63d472e6" target="_blank">Data Science Toolbox- by Coursera </a></li>
+										</ul>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="colorlib-work" data-section="work">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Projects</span>
+							<!-- <h2 class="colorlib-heading animate-box"> Projects</h2> -->
+						</div>
+					</div>
+					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+						
+					</div>
+					<div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/img-1.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/sauravabc16/Employee-Research-Management-System/" target="_blank"> Employee Research Management</a></h3>
+										<h3><a href="https://github.com/sauravabc16/Employee-Research-Management-System/" target="_blank">Project Code</a></h3>
+										<span>Employee research management system is a website built using CSS, Bootstrap, JS and PHP where the students can view the research details of the particular faculty and choose them as the guide for their final year project. </span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="project" style="background-image: url(images/img-2.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/sauravabc16/">Online Voting System</a></h3>
+										
+										<span>This project is an developmenet of a online election management system to conduct, participate and manage elections. Both front and backend of website which can be used to cast vote and provide intelligent results.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+							<div class="project" style="background-image: url(images/img-3.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/sauravabc16/SmartBox">Smart-Box using Ardrino</a></h3>
+										
+										<span>Ardrino controlled smart box with two factor authentication for delivery of food and other sensitive items.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+							<div class="project" style="background-image: url(images/img-4.png);">
+								<div class="desc">
+									<div class="con">
+										<br><br>
+										<h3><a href="https://github.com/sauravabc16/combineBankStatements" target="_blank">Combine bank statements </a></h3>
+										<span>It combines existing bank statements in .csv format to outputs the file.<br>
+
+											I have used two ArrayLists Domestic and International and then combine both of them so that if required we can use them more smartly.  I have just used core Java(v1.8) features and no external modules have been used. The code uses O(nlogn) time complexity and O(n) space complexity.</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><a href="https://sauravabc16" target="_blank" class="btn btn-primary btn-lg btn-load-more">Load more on github<i class="icon-reload"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="colorlib-achievements" data-section="achievements">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta">Achievements</span>
+										<!-- <h2 class="colorlib-heading">Achievements</h2> -->
+										<p><ul>
+											<li>Java 5 Star in HackerRank</li>
+											<li>Problem Solving 5 star in HackerRank </li>
+											<li>CodeChef ranking- 3 star</li>
+											<li>Top 0.5 percentile in the state for I.Sc (Class 12)</li>
+
+										</ul>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<section class="colorlib-blog" data-section="blog">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Read</span>
+							<!-- <h2 class="colorlib-heading"> Blog</h2> -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="https://medium.com/@amulyaboyapati/introduction-to-ui-and-ux-design-3cf593f9fc5" target="_blank" class="blog-img"><img src="images/blog-1.png" class="img-responsive" ></a>
+								<div class="desc">
+									<span><small>June, 2020 </small> </span>
+									<h3><a href="https://medium.com/@amulyaboyapati/introduction-to-ui-and-ux-design-3cf593f9fc5" target="_blank">Introduction to UI and UX design</a></h3>
+									<p>An article which mainly discuss about the differences between UI/UX and responsiblities of a UI and UX designer.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="blog-entry">
+								<a href="https://medium.com/@amulyaboyapati/special-stack-8e6d2706a9d4" class="blog-img" target="_blank"><img src="images/blog-2.png" class="img-responsive" ></a>
+								<div class="desc">
+									<span><small>May, 2020 </small></span>
+									<h3><a href="https://medium.com/@amulyaboyapati/special-stack-8e6d2706a9d4" class="blog-img" target="_blank">Special Stack</a></h3>
+									<p>Implementation of a special stack that supports all the stack operations in constant time. O(1)</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><a href="https://medium.com/@amulyaboyapati" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-contact" data-section="contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Contact</span>
+							<h2 class="colorlib-heading">Get in Touch</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="row">
+							
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-mail"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="mailto:sauravabc16@yahoo.co.in">sauravabc16@yahoo.co.in</a></p>
+								</div>
+							</div>
+							
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a >Vellore, Tamil Nadu </a></p>
+								</div>
+							</div>
+
+							
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-globe-outline"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="#">xyz.com</a></p>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+	<script src="js/typed.js"></script>
+            <script>
+            var typed = new Typed('.typed-words', {
+            strings: [" a Software Developer"," a Technophile"," a Web Developer","a Data Science Enthusiast"],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 1000,
+            startDelay: 1000,
+            loop: true,
+            showCursor: true
+            });
+            </script>
+	</body>
+</html>
+
